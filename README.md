@@ -12,4 +12,15 @@ La función encargada de esta tarea es `get_data(depth, crpt)` donde:
 
 * `depth` indica el número de ofertas requeridas a cada lado del Order Book. Para el desarrollo del TFM se han empleado 5.000 por lado.
 
-Además, es posible programar el intervalo de tiempo transcurrido entre ejecuciones del programa. Por defecto, se establece en 1 minuto dado que ha sido el valor utilizado.
+Además, es posible programar el intervalo de tiempo transcurrido entre ejecuciones del programa. Por defecto, se establece en 1 minuto dado que ha sido el valor utilizado. 
+
+El resultado de una iteración en este algoritmo es un archivo tipo `feather` que cotiene 10.000 registros (5.000 órdenes de compra y 5.000 órdenes de venta) con las variables: `date`, `price`, `quantity`, `side` y `crpt`. 
+
+## Fichero 2: Lectura y tratamiento de base de datos.ipynb
+
+Fichero para la creación de las estructuras de datos.
+
+El eje principal de este script es la función `createMatrix(tipo, BTCOB, cubes)` donde :
+
+* `tipo` puede tomar los valores 1 o 2 para la creación de los datos del planteamiento 1 y del planteamiento 2, respectivamente.
+* `BTCOB` es una lista que contiene a los archivos tipo `feather` generados con el Fichero 1.
