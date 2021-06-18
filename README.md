@@ -12,7 +12,7 @@ La función encargada de esta tarea es `get_data(depth, crpt)` donde:
 
 * `depth` indica el número de ofertas requeridas a cada lado del Order Book. Para el desarrollo del TFM se han empleado 5.000 por lado.
 
-Además, es posible programar el intervalo de tiempo transcurrido entre ejecuciones del programa. Por defecto, se establece en 1 minuto dado que ha sido el valor utilizado. 
+Además, es posible programar el intervalo de tiempo transcurrido entre ejecuciones del programa. Por defecto, se establece en 1 minuto.
 
 El resultado de una iteración en este algoritmo es un archivo tipo `feather` que cotiene 10.000 registros (5.000 órdenes de compra y 5.000 órdenes de venta) con las variables: `date`, `price`, `quantity`, `side` y `crpt`. 
 
