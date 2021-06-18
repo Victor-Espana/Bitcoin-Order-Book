@@ -24,14 +24,28 @@ El eje principal de este script es la función `createMatrix(tipo, BTCOB, cubes)
 
 * `tipo` puede tomar los valores 1 o 2 para la creación de los datos del planteamiento 1 y del planteamiento 2, respectivamente.
 * `BTCOB` es una lista que contiene a los archivos tipo `feather` generados con el Fichero 1.
-* `cubes` es el tamaño de las amplitudes del Order Book seleccionadas para la creación de variables. Aunque pueden sufrir variaciones, el programa está especificamente diseñado para que esta lista contenga exactamente 30 elementos.
+* `cubes` es el tamaño de las amplitudes del Order Book seleccionadas para la creación de variables. Aunque puede sufrir variaciones, el programa está especificamente diseñado para que esta lista contenga exactamente 30 elementos.
 
-Esta función genera las estructuras de datos en base al tipo de estructura seleccionada. Las siguientes funciones son comunes para ambos tipos de planteamientos:
+Esta función genera las estructuras de datos en base al `tipo` seleccionado. Las siguientes funciones son comunes para ambos tipos de planteamientos:
 
-* `preProcesado(df)`: toma un archivo tipo `feather` convertido en `pandas data.frame`, transforma los datos al formato correcto, y devuelve 3 elementos: (1) una base de datos con los asks (`dfAsks`), (2) una base de datos con los bids (`dfBids`) y (3) el mid-price (`midprice`).
+* `preProcesado(df)`: toma un archivo tipo `feather` convertido en `pd.DataFrame`, transforma los datos al formato correcto y devuelve 3 elementos: (1) una base de datos con los asks (`dfAsks`), (2) una base de datos con los bids (`dfBids`) y (3) el mid-price (`midprice`).
 * `addDate(df)`: guarda la fecha (`date`) y la variable `minBeijing`.
 
-Además también se categoriza la variable `midprice` para que determine los cambios de tendencia a 5 minutos. El resultado será 1 si la tendencia se mantiene o crece respecto a 5 minutos de anterioriedad y será 0 en caso contrario. 
+Además `createMatrix(tipo, BTCOB, cubes)` también categoriza la variable `midprice` para que determine los cambios de tendencia a 5 minutos. El resultado será 1 si la tendencia se mantiene o crece respecto a 5 minutos de anterioriedad y será 0 en caso contrario. 
+
+### Planteamiento 1
+
+La función generadora de la estructura de datos para el planteamiento 1 es `Tipo1(dateArray, midpriceArray, y)` donde:
+
+* `dateArray`: array con todos los registros de la variable `date`.
+* `midpriceArray`: array con todos los registros de la variable `midprice`. 
+* `y`: array con la variable `midprice` categorizada.
+
+La función `Tipo1(dateArray, midpriceArray, y)` crea registros a partir de la variable `midpriceArray` en el formato (t, t-1, t-2), otorgándole de esta forma, memoria al modelo. 
+
+### Planteamiento 2
+
+...
 
 * `CreateBids(dfBids, cubes, midprice)`: crea las variables del grupo II a partir de los  `cubes` introducidos por el usuario.
 * `CreateAsks(dfAsks, cubes, midprice)`: crea las variables del grupo III a partir de los  `cubes` introducidos por el usuario.
