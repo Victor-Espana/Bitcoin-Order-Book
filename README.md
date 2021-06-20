@@ -24,14 +24,14 @@ Función principal: `createMatrix(tipo, BTCOB, cubes)`
 
 * `tipo`: `int`. Puede tomar el valor `1` para la creación de la estructura de datos del plantemianto 1 o `2` para la estructura del planteamiento 2.
 * `BTCOB`: `list`. Contiene los archivos tipo `feather` generados con el Fichero 1.
-* `cubes`: tamaño de las amplitudes del Order Book seleccionadas para la creación de variables. Aunque los valores escogidos pueden sufrir variaciones, el programa está especificamente diseñado para que esta lista contenga exactamente 30 elementos.
+* `cubes`: `list`. Valores con los tamaños de las amplitudes del Order Book seleccionadas para la creación de las variables. La lista debe contener 30 elementos exactamente.
 
 Esta función genera las estructuras de datos en base al `tipo` seleccionado. Las siguientes funciones son comunes para ambos tipos de planteamientos:
 
-* `preProcesado(df)`: toma un archivo tipo `feather` convertido en `pd.DataFrame` y transforma los datos a los formatos requeridos. Devuelve 3 elementos: (1) una base de datos con los asks (`dfAsks`), (2) una base de datos con los bids (`dfBids`) y (3) el mid-price (`midprice`).
+* `preProcesado(df)`: toma un archivo tipo `feather` convertido en `pd.DataFrame` y transforma los datos a los formatos requeridos. Devuelve 3 elementos: (1) una base de datos con las ofertas del lado de los asks (`dfAsks`), (2) una base de datos con las ofertas del lado de los bids (`dfBids`) y (3) el mid-price (`midprice`).
 * `addDate(df)`: guarda la fecha (`date`) y la variable `minBeijing`.
 
-Además `createMatrix(tipo, BTCOB, cubes)` también categoriza la variable `midprice` para que determine sus cambios de tendencia a 5 minutos. Por lo tanto, tomará el valor 1 si la tendencia es constante o ascendente y 0 si es descendente. 
+Por otro lado, `createMatrix(tipo, BTCOB, cubes)` también categoriza la variable `midprice` para que determine sus cambios de tendencia a 5 minutos. De esta forma, tomará el valor 1 si la tendencia es constante o ascendente y 0 si es descendente. 
 
 ### Planteamiento 1
 
