@@ -29,7 +29,7 @@ Función principal: `createMatrix(tipo, BTCOB, cubes)`
 Esta función genera las estructuras de datos en base al `tipo` seleccionado. Las siguientes funciones son comunes para ambos tipos de planteamientos:
 
 * `preProcesado(df)`: toma un archivo tipo `feather` convertido en `pd.DataFrame`, transforma los datos a los formatos requeridos y crea la variable volumen (`PrQt`). Devuelve 3 elementos: (1) una base de datos con las ofertas del lado de los asks (`dfAsks`), (2) una base de datos con las ofertas del lado de los bids (`dfBids`) y (3) el mid-price (`midprice`).
-* `addDate(df)`: guarda la fecha (`date`) y la variable `minBeijing`.
+* `addDate(df)`: guarda la fecha (`date`) y la variable `minBeijing`. La información se almacena en un array: `Dn`.
 
 Por otro lado, `createMatrix()` también categoriza la variable `midprice` para que determine sus cambios de tendencia a 5 minutos. De esta forma, tomará el valor 1 si la tendencia es constante o ascendente y 0 si es descendente. 
 
