@@ -10,7 +10,7 @@ Función: `get_data(depth, crpt)`
 
 * `crpt`: `str`. Intercambio de divisas del cual se obtiene el Order Book. Para el desarrollo del TFM se han utilizado los valores: BTCBUSD (bitcoin - United States Dollars Tether) y ETHBUSD (ethereum -  United States Dollars Tether). Las opciones requeridas deben ser introducidas en la lista sobre la que itera el bucle que contiene la función `get_data()`. Más posibles intercambios de divisas disponibles en: https://www.binance.com/es/trade/BTC_BUSD?layout=pro&type=spot
 
-* `depth`: `int`. Número de ofertas requeridas a cada lado del Order Book. Para el desarrollo del TFM se han empleado 5.000 por lado.
+* `depth`: `int`. Número de ofertas requeridas a cada lado del Order Book. Para el desarrollo del TFM se han empleado 5.000 (por lado).
 
 Además, es posible programar el intervalo de tiempo transcurrido entre ejecuciones del programa. Por defecto, se establece en 1 minuto.
 
