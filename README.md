@@ -35,9 +35,9 @@ Además `createMatrix(tipo, BTCOB, cubes)` también categoriza la variable `midp
 
 ### Planteamiento 1
 
-La función generadora de la estructura de datos para el planteamiento 1 es `Tipo1(dateArray, midpriceArray, y)` donde:
+La función generadora de la estructura de datos para el planteamiento 1 es `Tipo1(Dn, midpriceArray, y)` donde:
 
-* `dateArray`: array con todos los registros de la variable `date`.
+* `Dn`: array con todos los registros de la variable `date`.
 * `midpriceArray`: array con todos los registros de la variable `midprice`. 
 * `y`: array con la variable `midprice` categorizada.
 
@@ -45,7 +45,21 @@ La función `Tipo1(dateArray, midpriceArray, y)` crea registros a partir de la v
 
 ### Planteamiento 2
 
-...
+Para la creación de los datos del planteamiento 2 se introduce una nueva función: `addOrderBook(dfBids, dfAsks, cubes, midprice, crp)` donde:
+
+* `dfBids`: `pd.DataFrame` con los bids creadas en `preProcesado(df)`.
+* `dfAsks`: `pd.DataFrame` con los asks creadas en `preProcesado(df)`.
+* `cubes`: tamaño de las amplitudes del Order Book introducidas por el usuario en `createMatrix(tipo, BTCOB, cubes)`.
+* `midprice`: midprice correspondiente a la instantánea del Order Book almacenada.
+* `crp`: criptomoneda. Para el planteamiento 2, toma el valor `btc`.
+
+
+
+La función generadora de la estructura de datos para el planteamiento 2 es `Tipo2(Dn, Bn, y)` donde:
+
+* `Dn`: array con todos los registros de la variable `date`.
+* `midpriceArray`: array con todos los registros de la variable `midprice`. 
+* `y`: array con la variable `midprice` categorizada.
 
 * `CreateBids(dfBids, cubes, midprice)`: crea las variables del grupo II a partir de los `cubes` introducidos por el usuario.
 * `CreateAsks(dfAsks, cubes, midprice)`: crea las variables del grupo III a partir de los `cubes` introducidos por el usuario.
