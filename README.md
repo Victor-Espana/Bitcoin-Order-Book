@@ -22,7 +22,7 @@ Fichero para la creación de las estructuras de datos.
 
 Función principal: `createMatrix(tipo, BTCOB, cubes)`
 
-* `tipo`: `int`. Puede tomar el valor `1` para la creación de la estructura de datos del plantemianto 1 o `2` para la estructura del planteamiento 2.
+* `tipo`: `int`. Puede tomar los valores `1` o `2` para la creación de las estructuras de datos de los planteamientoa 1 y 2, respectivamente.
 * `BTCOB`: `list`. Contiene los archivos tipo `feather` generados con el Fichero 1.
 * `cubes`: `list`. Valores con los tamaños de las amplitudes del Order Book seleccionadas para la creación de las variables. La lista debe contener 30 elementos exactamente.
 
