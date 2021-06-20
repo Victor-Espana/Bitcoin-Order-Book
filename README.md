@@ -47,8 +47,8 @@ La función `Tipo1()` crea registros a partir de la variable `midpriceArray` en 
 
 Función: `addOrderBook(dfBids, dfAsks, cubes, midprice, crp)`
 
-* `dfBids`: `pd.DataFrame` con los bids creado en `preProcesado()`.
-* `dfAsks`: `pd.DataFrame` con los asks creado en `preProcesado()`.
+* `dfBids`: `pd.DataFrame` (side = bids) creado en `preProcesado()`.
+* `dfAsks`: `pd.DataFrame` (side = asks) creado en `preProcesado()`.
 * `cubes`: tamaño de las amplitudes del Order Book introducidas por el usuario en `createMatrix()`.
 * `midprice`: mid-price correspondiente a la instantánea del Order Book almacenada.
 * `crp`: criptomoneda. Para el planteamiento 2, toma el valor `btc`.
