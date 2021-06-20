@@ -41,7 +41,7 @@ Función: `Tipo1(Dn, midpriceArray, y)`
 * `midpriceArray`: array con todos los registros de la variable `midprice`. 
 * `y`: array con la variable `midprice` categorizada.
 
-La función `Tipo1()` crea registros a partir de la variable `midpriceArray` en el formato (t, t-1, t-2), otorgándole de esta forma memoria al modelo. Finalmente, se concatenan `Dn` e `y`.
+La función `Tipo1()` crea registros a partir de la variable `midpriceArray` en el formato (t, t-1, t-2) (memoria). Finalmente, se concatenan `Dn` e `y`.
 
 ### Planteamiento 2
 
