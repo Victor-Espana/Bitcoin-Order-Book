@@ -35,7 +35,7 @@ Por otro lado, `createMatrix()` también categoriza la variable `midprice` para 
 
 ### Planteamiento 1
 
-La función generadora de la estructura de datos para el planteamiento 1 es `Tipo1(Dn, midpriceArray, y)` donde:
+Función: `Tipo1(Dn, midpriceArray, y)`
 
 * `Dn`: array con todos los registros creados por la función `addDate(df)`.
 * `midpriceArray`: array con todos los registros de la variable `midprice`. 
@@ -45,7 +45,7 @@ La función `Tipo1()` crea registros a partir de la variable `midpriceArray` en 
 
 ### Planteamiento 2
 
-Para la creación de los datos del planteamiento 2 se introduce una nueva función: `addOrderBook(dfBids, dfAsks, cubes, midprice, crp)` donde:
+Función: `addOrderBook(dfBids, dfAsks, cubes, midprice, crp)`
 
 * `dfBids`: `pd.DataFrame` con los bids creado en `preProcesado()`.
 * `dfAsks`: `pd.DataFrame` con los asks creado en `preProcesado()`.
