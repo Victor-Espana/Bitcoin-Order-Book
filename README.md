@@ -1,6 +1,6 @@
 # Bitcoin-Order-Book
 
-Este repositorio forma parte del Trabajo Fin de Máster: Modelización del Proceso de Formación de Precios del Bitcoin Basado en Indicadores de Oferta y Demanda, del alumno Víctor Javier España Roch para la Universidad Europea Miguel de Cervantes (UEMC).
+Este repositorio forma parte del Trabajo Fin de Máster: Modelización del Proceso de Formación de Precios del Bitcoin Basado en Indicadores de Oferta y Demanda del alumno Víctor Javier España Roch para la Universidad Europea Miguel de Cervantes (UEMC).
 
 ## Fichero 1: Obtención de datos.ipynb
 
