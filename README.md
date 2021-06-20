@@ -6,7 +6,7 @@ Este repositorio forma parte del Trabajo Fin de Máster: Modelización del Proce
 
 Fichero para la obtención de datos provenientes del Order Book. 
 
-La función encargada de esta tarea es `get_data(depth, crpt)` donde:
+Función: `get_data(depth, crpt)`
 
 * `crpt` indica el intercambio de divisas del cual se obtiene el Order Book. Para el desarrollo del TFM se han utilizado los valores: BTCBUSD (bitcoin - United States Dollars Tether) y ETHBUSD (ethereum -  United States Dollars Tether). Las opciones requeridas deben ser introducidas en la lista sobre la que itera el bucle que contiene la función `get_data(depth, crpt)`. Más posibles intercambios de divisas disponibles en: https://www.binance.com/es/trade/BTC_BUSD?layout=pro&type=spot
 
