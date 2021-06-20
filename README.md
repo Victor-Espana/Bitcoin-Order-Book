@@ -47,21 +47,29 @@ La función `Tipo1(dateArray, midpriceArray, y)` crea registros a partir de la v
 
 Para la creación de los datos del planteamiento 2 se introduce una nueva función: `addOrderBook(dfBids, dfAsks, cubes, midprice, crp)` donde:
 
-* `dfBids`: `pd.DataFrame` con los bids creadas en `preProcesado(df)`.
-* `dfAsks`: `pd.DataFrame` con los asks creadas en `preProcesado(df)`.
+* `dfBids`: `pd.DataFrame` con los bids creado en `preProcesado(df)`.
+* `dfAsks`: `pd.DataFrame` con los asks creado en `preProcesado(df)`.
 * `cubes`: tamaño de las amplitudes del Order Book introducidas por el usuario en `createMatrix(tipo, BTCOB, cubes)`.
 * `midprice`: midprice correspondiente a la instantánea del Order Book almacenada.
 * `crp`: criptomoneda. Para el planteamiento 2, toma el valor `btc`.
 
+La función `addOrderBook(dfBids, dfAsks, cubes, midprice, crp)` contiene las siguientes funciones:
 
+* `CreateBids(dfBids, cubes, midprice)`: crea las variables del grupo II a partir de los `cubes` introducidos por el usuario.
+* `CreateAsks(dfAsks, cubes, midprice)`: crea las variables del grupo III a partir de los `cubes` introducidos por el usuario.
+* `WeightedFeatures(dfSide, side)`: crea las variables del grupo IV. Puede tomar los valores `dfSide = dfBids` y `side = "bid"` o `dfSide = dfAsks` y `side = "ask"`. Solo se ejecuta cuando `crp = "btc"`.
+* `CreateSlope(offers, cubes, midprice)`: crea las variables del grupo V. El argumento `offers` debe contener el objeto devuelto por `CreateBids(dfBids, cubes, midprice)` o por `CreateAsks(dfAsks, cubes, midprice)` seleccionando tan solo 15 de sus filas. De la misma forma, para el argumento `cubes` tan solo deben introducirse 15 elementos. 
+* `DistrFeatures(dfSide, side)`: crea las variables del grupo VI. Solo se ejecuta cuando `crp = "btc"`.
+
+Finalmente, se concatenan todos los valores obtenidos de las funciones anteriores y se devuelve la lista resultante como resultado de la función.
 
 La función generadora de la estructura de datos para el planteamiento 2 es `Tipo2(Dn, Bn, y)` donde:
 
 * `Dn`: array con todos los registros de la variable `date`.
-* `midpriceArray`: array con todos los registros de la variable `midprice`. 
+* `Bn`: array con todos los registros obtenidos en `addOrderBook(dfBids, dfAsks, cubes, midprice, crp)`. 
 * `y`: array con la variable `midprice` categorizada.
 
-* `CreateBids(dfBids, cubes, midprice)`: crea las variables del grupo II a partir de los `cubes` introducidos por el usuario.
-* `CreateAsks(dfAsks, cubes, midprice)`: crea las variables del grupo III a partir de los `cubes` introducidos por el usuario.
+Finalmente, la función `Tipo2(Dn, Bn, y)` concatena las matrices / vectores de información y devuelve la base de datos resultante.
+
 
 
