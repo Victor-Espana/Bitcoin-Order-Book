@@ -65,11 +65,13 @@ Finalmente, se concatenan todos los valores obtenidos de las funciones anteriore
 
 La función generadora de la estructura de datos para el planteamiento 2 es `Tipo2(Dn, Bn, y)` donde:
 
-* `Dn`: array con todos los registros de la variable `date`.
-* `Bn`: array con todos los registros obtenidos en `addOrderBook(dfBids, dfAsks, cubes, midprice, crp)`. 
+* `Dn`: array obtenido de `addDate()`.
+* `Bn`: array obtenido de `addOrderBook()`. 
 * `y`: array con la variable `midprice` categorizada.
 
-Finalmente, la función `Tipo2(Dn, Bn, y)` concatena las matrices / vectores de información y devuelve la base de datos resultante.
+Finalmente, la función `Tipo2()` concatena las matrices / vectores de información y devuelve la base de datos resultante, la cual contiene 107 columnas.
+
+#### PCA
 
 
 
