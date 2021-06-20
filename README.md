@@ -57,9 +57,9 @@ La función `addOrderBook()` contiene las siguientes funciones:
 
 * `CreateBids(dfBids, cubes, midprice)`: crea las variables del grupo II a partir de los `cubes` introducidos por el usuario.
 * `CreateAsks(dfAsks, cubes, midprice)`: crea las variables del grupo III a partir de los `cubes` introducidos por el usuario.
-* `WeightedFeatures(dfSide, side)`: crea las variables del grupo IV. Puede tomar los valores {`dfSide = dfBids`, `side = "bid"`} o {`dfSide = dfAsks`, `side = "ask"`}. Solo se ejecuta cuando `crp = "btc"`.
-* `CreateSlope(offers, cubes, midprice)`: crea las variables del grupo V. El argumento `offers` debe contener el objeto devuelto por `CreateBids(dfBids, cubes, midprice)` o por `CreateAsks(dfAsks, cubes, midprice)` seleccionando tan solo 15 de sus filas. De la misma forma, para el argumento `cubes` tan solo deben introducirse 15 elementos. 
-* `DistrFeatures(dfSide, side)`: crea las variables del grupo VI. Solo se ejecuta cuando `crp = "btc"`.
+* `WeightedFeatures(dfSide, side)`: crea las variables del grupo IV. Puede tomar los valores {`dfSide = dfBids`, `side = 'bid'`} o {`dfSide = dfAsks`, `side = 'ask'`}. Solo se ejecuta cuando `crp = 'btc'`.
+* `CreateSlope(offers, cubes, midprice)`: crea las variables del grupo V. El argumento `offers` debe contener el objeto devuelto por `CreateBids()` o por `CreateAsks()` seleccionando tan solo 15 de sus filas. De la misma forma, para el argumento `cubes` tan solo deben introducirse 15 elementos. Por defecto, se seleccionan `[0:30:2]` 
+* `DistrFeatures(dfSide, side)`: crea las variables del grupo VI.  Puede tomar los valores {`dfSide = dfBids`, `side = 'bid'`} o {`dfSide = dfAsks`, `side = 'ask'`}. Solo se ejecuta cuando `crp = 'btc'`.
 
 Finalmente, se concatenan todos los valores obtenidos de las funciones anteriores y se devuelve la lista resultante como resultado de la función.
 
