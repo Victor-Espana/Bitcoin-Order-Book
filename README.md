@@ -50,18 +50,18 @@ Función: `addOrderBook(dfBids, dfAsks, cubes, midprice, crp)`
 * `dfBids`: `pd.DataFrame` (side = bids) creado en `preProcesado()`.
 * `dfAsks`: `pd.DataFrame` (side = asks) creado en `preProcesado()`.
 * `cubes`: tamaño de las amplitudes del Order Book introducidas por el usuario en `createMatrix()`.
-* `midprice`: mid-price correspondiente a la instantánea del Order Book almacenada.
+* `midprice`: mid-price de la instantánea del Order Book almacenada. Tercer elemento devuelto de `preProcesado()`.
 * `crp`: criptomoneda. Para el planteamiento 2, toma el valor `btc`.
 
-La función `addOrderBook()` contiene las siguientes funciones:
+`addOrderBook()` contiene las siguientes funciones:
 
 * `CreateBids(dfBids, cubes, midprice)`: crea las variables del grupo II a partir de los `cubes` introducidos por el usuario.
 * `CreateAsks(dfAsks, cubes, midprice)`: crea las variables del grupo III a partir de los `cubes` introducidos por el usuario.
-* `WeightedFeatures(dfSide, side)`: crea las variables del grupo IV. Puede tomar los valores {`dfSide = dfBids`, `side = 'bid'`} o {`dfSide = dfAsks`, `side = 'ask'`}. Solo se ejecuta cuando `crp = 'btc'`.
-* `CreateSlope(offers, cubes, midprice)`: crea las variables del grupo V. El argumento `offers` debe contener el objeto devuelto por `CreateBids()` o por `CreateAsks()` seleccionando tan solo 15 de sus filas. De la misma forma, para el argumento `cubes` tan solo deben introducirse 15 elementos. Por defecto, se seleccionan `[0:30:2]` 
-* `DistrFeatures(dfSide, side)`: crea las variables del grupo VI.  Puede tomar los valores {`dfSide = dfBids`, `side = 'bid'`} o {`dfSide = dfAsks`, `side = 'ask'`}. Solo se ejecuta cuando `crp = 'btc'`.
+* `WeightedFeatures(dfSide, side)`: crea las variables del grupo IV. Puede tomar los valores {`dfSide = dfBids`, `side = 'bid'`} / {`dfSide = dfAsks`, `side = 'ask'`}. Solo se ejecuta cuando `crp = 'btc'`.
+* `CreateSlope(offers, cubes, midprice)`: crea las variables del grupo V. El argumento `offers` debe contener el objeto devuelto por `CreateBids()`/`CreateAsks()` seleccionando tan solo 15 de sus filas. De la misma forma, para el argumento `cubes` tan solo deben introducirse 15 elementos. Por defecto, se seleccionan para ambos casos `[0:30:2]`. 
+* `DistrFeatures(dfSide, side)`: crea las variables del grupo VI. Puede tomar los valores {`dfSide = dfBids`, `side = 'bid'`} / {`dfSide = dfAsks`, `side = 'ask'`}. Solo se ejecuta cuando `crp = 'btc'`.
 
-Finalmente, se concatenan todos los valores obtenidos de las funciones anteriores y se devuelve la lista resultante como resultado de la función.
+Finalmente, se concatenan todos los valores obtenidos de las funciones anteriores y se devuelve la lista resultante como resultado de la función (`Bn`).
 
 La función generadora de la estructura de datos para el planteamiento 2 es `Tipo2(Dn, Bn, y)` donde:
 
