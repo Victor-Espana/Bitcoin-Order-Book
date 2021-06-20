@@ -77,10 +77,29 @@ Tal y como se demuestra en documento escrito, las variables de los grupos II, II
 
 El Fichero 3 contiene el código y los resultados de aplicar PCA sobre el conjunto de datos desarrollado anteriormente. Se muestran:
 
-* Gráficos de proporción de varianza explicada y de aportación de cada componente.
+* Gráficos de proporción total de varianza explicada y de proporción explicada por cada componente.
 * Coeficientes de la combinación lineal que resultan de la aplicación de PCA.
 * Proyección de cada grupo de variables al espacio de 3 dimensiones generado por PCA. 
 * Proyección de cada grupo de variables al espacio de 2 dimensiones generado por PCA.
 
+También se muestran los Order Book canónicos a partir de los cuales se podría determinar cualquier Order Book canónico. 
 
+Finalmente, se genera una nueva base de datos con las variables de los grupos II, III y V reducidas por Componentes Principales. Estas nuevas variables serán incluidas en los datos obtenidos del planteamiento 2 (eliminando las originales) y conformando así, la base de datos correspondiente al planteamiento 2.
 
+### Planteamiento 3
+
+Función: `memory(X)`:
+
+* `X`: base de datos generada en Fichero 3.
+
+Transforma los datos al formato (t, t-1, t-2) (memoria). Finalmente se concatenan aquellas variables no sometidas a este proceso. 
+
+### Planteamiento 4
+
+Función: `Tipo4(ETHOB, cubes):
+* `ETHOB`: `list`. Contiene los archivos tipo `feather` de Ethereum generados con el Fichero 1.
+* `cubes`: `list`. Valores con los tamaños de las amplitudes del Order Book seleccionadas para la creación de las variables. La lista debe contener 30 elementos.
+
+Esta función es prácticamente idéntica al proceso descrito para el Planteamiento 2 e igualmente, a su finalización, las variables de los grupos II, III y V son reducidas mediante PCA (en este caso no se generan las variables de los grupos IV y VI). Nuevamente, se aplica la función `memory(X)` sobre los datos.
+
+Finalmente, se concatenan los datos del planteamiento 3 a los nuevos datos generados mediante ethereum.
