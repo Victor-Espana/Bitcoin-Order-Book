@@ -96,9 +96,9 @@ Transforma los datos relativos a los grupos II, III y V del planteamiento 2 al f
 ### Planteamiento 4
 
 Función: `Tipo4(ETHOB, cubes):
-* `ETHOB`: `list`. Contiene los archivos tipo `feather` de Ethereum generados con el Fichero 1.
-* `cubes`: `list`. Valores con los tamaños de las amplitudes del Order Book seleccionadas para la creación de las variables. La lista debe contener 30 elementos.
+* `ETHOB`: `list`. Contiene los archivos tipo `feather` de ethereum generados con el Fichero 1.
+* `cubes`: `list`. Valores con los tamaños de las amplitudes del Order Book seleccionadas para la creación de las variables de los grupos II y III. La lista debe contener exactamente 30 elementos.
 
-Esta función es prácticamente idéntica al proceso descrito para el Planteamiento 2 e igualmente, a su finalización, las variables de los grupos II, III y V son reducidas mediante PCA (en este caso no se generan las variables de los grupos IV y VI). Nuevamente, se aplica la función `memory(X)` sobre los datos.
+Esta función aplica un procedimiento prácticamente idéntico al descrito en el Planteamiento 2. No obstante, en este caso no se calculan las variables de los grupos IV y VI. Tal y como ocurría anteriormente, a la finalización del proceso, este grupo de variables generadas a partir de los datos de ethereum son reducidas mediante PCA. Finalmente, al nuevo conjunto de datos se le aplica la función `memory()`. 
 
-Finalmente, se concatenan los datos del planteamiento 3 a los nuevos datos generados mediante ethereum.
+Como último paso, el conjunto de datos generado es concatenado a la estructura de datos del planteamiento 3, creando así, la estructura de datos del planteamiento 4.
