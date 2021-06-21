@@ -73,7 +73,7 @@ Finalmente, la función `Tipo2()` concatena las matrices / vectores de informaci
 
 ## Fichero 3: Reducción de dimensionalidad.ipynb
 
-Tal y como se demuestra en documento escrito, las variables de los grupos II, III y V presentan una dependencia lineal muy elevada entre ellos. Este hecho justifica la utilización de PCA para la reducción de la dimensionalidad.
+Tal y como se demuestra en el documento escrito, las variables de los grupos II, III y V presentan una dependencia lineal muy elevada entre ellos. Este hecho justifica la utilización de PCA para la reducción de la dimensionalidad.
 
 El Fichero 3 contiene el código y los resultados de aplicar PCA sobre el conjunto de datos desarrollado anteriormente. Se muestran:
 
