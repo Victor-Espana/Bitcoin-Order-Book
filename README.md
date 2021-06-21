@@ -83,7 +83,7 @@ El Fichero 3 contiene el código y los resultados de aplicar PCA sobre el conjun
 * Proyección de cada grupo de variables al espacio de 2 dimensiones generado por PCA.
 * Order Book canónicos a partir de los cuales se podría determinar cualquier Order Book observado. 
 
-Finalmente, se genera una nueva base de datos con las variables de los grupos II, III y V reducidas por Componentes Principales. Estas nuevas variables serán incluidas en los datos obtenidos del planteamiento 2 (eliminando las originales) y conformando así, la base de datos correspondiente al planteamiento 2.
+Finalmente, se genera una nueva base de datos con las variables de los grupos II, III y V reducidas por Componentes Principales. Estas nuevas variables serán incluidas en los datos obtenidos del planteamiento 2 (eliminando las originales) y conformando así, la forma final de esta estructura de datos.
 
 ### Planteamiento 3
 
