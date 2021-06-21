@@ -51,7 +51,7 @@ Función: `addOrderBook(dfBids, dfAsks, cubes, midprice, crp)`
 * `dfAsks`: `pd.DataFrame` (side = asks) creado en `preProcesado()`.
 * `cubes`: tamaño de las amplitudes del Order Book introducidas por el usuario en `createMatrix()`.
 * `midprice`: mid-price de la instantánea del Order Book almacenada. Tercer elemento devuelto de `preProcesado()`.
-* `crp`: criptomoneda. Para el planteamiento 2, toma el valor `btc`.
+* `crp`: criptomoneda. Para el planteamiento 2, toma el valor `btc` (referido a bitcoin).
 
 `addOrderBook()` contiene las siguientes funciones:
 
