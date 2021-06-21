@@ -61,7 +61,7 @@ Función: `addOrderBook(dfBids, dfAsks, cubes, midprice, crp)`
 * `CreateSlope(offers, cubes, midprice)`: crea las variables del grupo V. El argumento `offers` debe contener el objeto devuelto por `CreateBids()`/`CreateAsks()` seleccionando tan solo 15 de sus filas. De la misma forma, para el argumento `cubes` tan solo deben introducirse 15 elementos. Por defecto, se seleccionan para ambos casos `[0:30:2]`. 
 * `DistrFeatures(dfSide, side)`: crea las variables del grupo VI. Puede tomar los valores {`dfSide = dfBids`, `side = 'bid'`} / {`dfSide = dfAsks`, `side = 'ask'`}. Solo se ejecuta cuando `crp = 'btc'`.
 
-Finalmente, se concatenan todos los valores obtenidos de las funciones anteriores y se devuelve la lista resultante como resultado de la función (`Bn`).
+Finalmente, se concatenan todos los valores obtenidos de las funciones anteriores y se devuelve una lista (`Bn`).
 
 La función generadora de la estructura de datos para el planteamiento 2 es `Tipo2(Dn, Bn, y)` donde:
 
