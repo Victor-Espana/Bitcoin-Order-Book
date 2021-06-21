@@ -38,7 +38,7 @@ Por otro lado, `createMatrix()` también categoriza la variable `midprice` para 
 Función: `Tipo1(Dn, midpriceArray, y)`
 
 * `Dn`: array con todos los registros creados por la función `addDate()`.
-* `midpriceArray`: array con todos los registros de la variable `midprice`. 
+* `midpriceArray`: array con todos los registros de la variable `midprice` creados por la función `preProcesado()`. 
 * `y`: array con la variable `midprice` categorizada.
 
 La función `Tipo1()` crea registros a partir de la variable `midpriceArray` en el formato (t, t-1, t-2) (memoria). Finalmente, se concatenan `Dn` e `y`.
