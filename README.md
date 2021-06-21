@@ -91,7 +91,7 @@ Función: `memory(X)`:
 
 * `X`: base de datos generada en Fichero 3.
 
-Transforma los datos al formato (t, t-1, t-2) (memoria). Finalmente se concatenan aquellas variables no sometidas a este proceso. 
+Transforma los datos relativos a los grupos II, III y V del planteamiento 2 al formato (t, t-1, t-2) (memoria). Finalmente se concatenan aquellas variables no sometidas a este proceso dando lugar a la estructura de datos resultante del planteamiento 3.
 
 ### Planteamiento 4
 
