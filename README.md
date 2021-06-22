@@ -102,3 +102,19 @@ Función: `Tipo4(ETHOB, cubes):
 Esta función aplica un procedimiento prácticamente idéntico al descrito en el Planteamiento 2. No obstante, en este caso no se crean las variables de los grupos IV y VI. Tal y como ocurría anteriormente, a la finalización del proceso, este grupo de variables generadas a partir de los datos de ethereum son reducidas mediante PCA. Finalmente, al nuevo conjunto de datos se le aplica la función `memory()`. 
 
 Como último paso, el conjunto de datos generado es concatenado a la estructura de datos del planteamiento 3, creando así, la estructura de datos del planteamiento 4.
+
+## Fichero 4: Descriptivo & Gráfico.ipynb
+
+Script dedicado a la generación de descriptivos y gráficos de los que obtener las justificaciones presentes en el capítulo 4. Exploración y selección de características. Con esta información se responde a las siguientes preguntas:
+
+* ¿Cuáles debían ser las aperturas del Order Book para la creación de las variables de los grupos II y III?
+* ¿A cuánto tiempo futuro podemos predecir con el planteamiento descrito?
+* ¿Cómo evoluciona el mid-price en cada minuto?
+* ¿Cómo es la autocorrelación en la variable mid-price?
+* ¿Cómo es la correlación entre las variables de los grupos II, III y V?
+
+## Fichero 5: Modelización.ipynb
+
+* Se dividen los datos en 80% para el conjunto de entrenamiento y 20% para el conjunto de test. Sobre el 80% se aplica la técnica de K-Fold Cross-validation con k = 5. 
+* Se plantea un conjunto de parametrizaciones para cada algoritmo propuesto (RandomForest y XGBoost), común para los 4 planteamientos
+* Para cada planteamiento y técnica, se muestran las curvas ROC, las matrices de confusión y las métricas: accuracy, precision, recall y F1, tanto para el conjunto de entrenamiento como para el conjunto de test.
